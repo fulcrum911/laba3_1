@@ -64,7 +64,7 @@ void Delete(Node **p, int data)
 			}
 	return;
 }
-int getMax(Node *aNode, int maximum) {
+int getMax(Node *aNode, int maximum) { //функцыя поверта максимальний елемент
 	if (aNode == NULL) {
 		return maximum;
 	}
@@ -72,7 +72,7 @@ int getMax(Node *aNode, int maximum) {
 		getMax(aNode->right, aNode->value));
 }
 
-int getMin(Node *aNode, int minimum) {
+int getMin(Node *aNode, int minimum) { //функція поверта мінімальний елемент дерева
 	if (aNode == NULL) {
 		return minimum;
 	}
@@ -80,7 +80,7 @@ int getMin(Node *aNode, int minimum) {
 		getMin(aNode->right, aNode->value));
 }
 
-int getSum(Node *aNode, int max, int min) {
+int getSum(Node *aNode, int max, int min) { //функція що поверта суму
 
 	return max + min;
 
@@ -97,12 +97,12 @@ void main()
 	InsertTree(&root, 9);
 	InsertTree(&root, 53);
 	InsertTree(&root, 49);
-	cout << "�������� �i������� ������" << endl;
+	cout << "Åëåìåíòè áiíàðíîãî äåðåâà" << endl;
 	PrintTree(root);
 	cout << endl;
-	cout << "������������ ������� =" << getMax(root, -1000) << endl;
-	cout << "�i�i�������  ������� =" << getMin(root, 1000) << endl;
-	cout << "���� ������� �������i� = " << getSum(root, getMax(root, -1000), getMin(root, 1000)) << endl;
+	cout << "Ìàêñèìàëüíèé åëåìåíò =" << getMax(root, -1000) << endl;
+	cout << "Ìiíiìàëüíèé  åëåìåíò =" << getMin(root, 1000) << endl;
+	cout << "Ñóìà çàäàíèõ åëåìåíòiâ = " << getSum(root, getMax(root, -1000), getMin(root, 1000)) << endl;
 	Delete(&root, 97);
 	Delete(&root, 8);
 	Delete(&root, 9);
